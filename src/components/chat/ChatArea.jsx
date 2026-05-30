@@ -151,7 +151,7 @@ export default function ChatArea({ onOpenSettings }) {
     setGenState('generating');
 
     try {
-      const apiBase = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      const apiBase = import.meta.env.VITE_API_URL || 'https://llm-hallucination.onrender.com';
       const response = await fetch(`${apiBase}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
